@@ -15,5 +15,11 @@ RSpec.describe FollowersNumber::Parser do
 
       described_class.call('https://instagram.com/profile', response)
     end
+
+    it 'calls youtube parser for youtube profile' do
+      expect(FollowersNumber::Parsers::Youtube).to receive(:parse)
+
+      described_class.call('https://youtube.com/profile', response)
+    end
   end
 end
