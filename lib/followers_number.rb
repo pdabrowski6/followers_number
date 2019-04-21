@@ -5,6 +5,7 @@ require 'json'
 require_relative 'followers_number/parsers/twitter'
 require_relative 'followers_number/parsers/instagram'
 require_relative 'followers_number/parsers/youtube'
+require_relative 'followers_number/parsers/facebook'
 
 require_relative 'followers_number/request'
 require_relative 'followers_number/validator'
