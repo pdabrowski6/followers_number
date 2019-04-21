@@ -2,7 +2,7 @@ module FollowersNumber
   class Validator
     class InvalidProfileURL < StandardError; end
 
-    NETWORKS = %w[twitter.com instagram.com]
+    NETWORKS = %w[twitter.com instagram.com youtube.com]
 
     def self.validate!(profile_url)
       unless NETWORKS.include?(URI.parse(profile_url.to_s.downcase).host)
