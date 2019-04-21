@@ -8,6 +8,12 @@ RSpec.describe FollowersNumber::Validator do
       ).to eq(true)
     end
 
+    it 'returns true when instagram URL is given' do
+      expect(
+        described_class.validate!('https://instagram.com/profile')
+      ).to eq(true)
+    end
+
     it 'raises InvalidProfileURL when profile URL is not supported' do
       expect {
         described_class.validate!('https://domain.com')
