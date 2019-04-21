@@ -27,5 +27,11 @@ RSpec.describe FollowersNumber::Parser do
 
       described_class.call('https://facebook.com/profile', response)
     end
+
+    it 'calls medium parser for medium profile' do
+      expect(FollowersNumber::Parsers::Medium).to receive(:parse)
+
+      described_class.call('https://medium.com/profile', response)
+    end
   end
 end
