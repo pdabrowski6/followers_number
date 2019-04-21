@@ -1,7 +1,8 @@
 module FollowersNumber
   class Parser
     MAPPING = {
-      'twitter.com' => FollowersNumber::Parsers::Twitter
+      'twitter.com' => FollowersNumber::Parsers::Twitter,
+      'instagram.com' => FollowersNumber::Parsers::Instagram
     }
 
     def self.call(profile_url, response)
